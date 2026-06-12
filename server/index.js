@@ -77,9 +77,15 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', hasApiKey: !!process.env.DEEPSEEK_API_KEY, hasPassword: !!ACCESS_PASSWORD });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 服务运行在 http://localhost:${PORT}`);
-  console.log(`   🔑 访问密码: ${ACCESS_PASSWORD}`);
-  console.log(`   🤖 API Key: ${process.env.DEEPSEEK_API_KEY ? '✅ 已配置' : '❌ 未配置'}`);
-  console.log(`   🛡️  限流: ${process.env.RATE_LIMIT_MAX || 20} 次/分钟`);
-});
+// 导出 app 供 Vercel serverless 使用
+module.exports = app;
+
+// 只在直接运行时启动监听（本地开发），Vercel 导入时不执行
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 服务运行在 http://localhost:${PORT}`);
+    console.log(`   🔑 访问密码: ${ACCESS_PASSWORD}`);
+    console.log(`   🤖 API Key: ${process.env.DEEPSEEK_API_KEY ? '✅ 已配置' : '❌ 未配置'}`);
+    console.log(`   🛡️  限流: ${process.env.RATE_LIMIT_MAX || 20} 次/分钟`);
+  });
+}

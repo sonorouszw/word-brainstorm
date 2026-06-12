@@ -1,0 +1,23 @@
+# Render Blueprint — 一键部署配置
+# 详见: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: word-brainstorm
+    env: node
+    region: singapore  # 亚洲区域，国内访问更快
+    buildCommand: |
+      cd frontend && npm install && npm run build
+      cd ../server && npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ACCESS_PASSWORD
+        value: storm123
+      - key: RATE_LIMIT_MAX
+        value: "20"
+      # ⚠️ 安全敏感变量：部署后在 Render Dashboard 中手动设置
+      # 不要在这里填写真实的 API Key（会被提交到 Git）
+      - key: DEEPSEEK_API_KEY
+        sync: false
