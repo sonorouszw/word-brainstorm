@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "guizang-ppt-skill": {
+      "source": "op7418/guizang-ppt-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "0999d931017a8c1a87d3070c520200bcc41de6b873a8b814f0116299cc63fc32"
+    },
+    "humanizer-zh": {
+      "source": "op7418/humanizer-zh",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "ad6b2b1f1433413c64f6403dc322d950da175a058f494291bd4399e77cb587c7"
+    },
+    "pdf": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/pdf/SKILL.md",
+      "computedHash": "af1e0791f5356b6de053e6b97d7703fe0d7ea1997371b9023afd4720bebcf93f"
+    },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "computedHash": "fcba6ff28cfd109d224f0d8b55bfc0f81e514bdf2941c65662fd17ff6368cb1c"
+    },
+    "ralph": {
+      "source": "snarktank/ralph",
+      "sourceType": "github",
+      "skillPath": "skills/ralph/SKILL.md",
+      "computedHash": "be0de698040463767f85f29cb776a65978dcff37b9f724c1c402954bb8aab874"
+    },
+    "web-access": {
+      "source": "eze-is/web-access",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "eea54461d11015f68b2e2c5865fe41d627b8d21f1a058b7ca5550f69f3d5922f"
+    }
+  }
+}

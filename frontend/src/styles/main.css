@@ -1,0 +1,48 @@
+/* 词语头脑风暴 — 全局样式 */
+
+/* ===== 色彩变量 ===== */
+:root {
+  --color-bg: #FFFBF5;
+  --color-card: #FFFFFF;
+  --color-card-border: #E8E0D5;
+  --color-primary: #E07B39;
+  --color-primary-hover: #C96A2E;
+  --color-text: #4A3728;
+  --color-text-light: #9B8E84;
+  --color-text-lighter: #C4B8AD;
+  --color-ai: #6C5CE7;
+  --color-local: #00B894;
+  --color-selected: #FDCB6E;
+  --color-danger: #E17055;
+  --color-shadow: rgba(0, 0, 0, 0.06);
+}
+
+/* ===== 全局重置 ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
