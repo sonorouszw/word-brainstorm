@@ -1,10 +1,9 @@
 {
   "name": "word-brainstorm",
-  "version": "0.1.0",
-  "description": "词语头脑风暴 — 输入词 → 扩展关联词 → 连接合并",
-  "scripts": {
-    "dev": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build",
-    "server": "cd server && node index.js"
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2"
   }
 }

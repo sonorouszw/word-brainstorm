@@ -1,7 +1,8 @@
 /**
  * Express 服务入口
  */
-require('dotenv').config();
+// 加载 .env（Vercel 部署时通过 Dashboard 设置环境变量，dotenv 不可用时跳过）
+try { require('dotenv').config(); } catch (e) { /* dotenv not available */ }
 
 const express = require('express');
 const cors = require('cors');
