@@ -17,7 +17,6 @@ services:
         value: storm123
       - key: RATE_LIMIT_MAX
         value: "20"
-      # ⚠️ 安全敏感变量：部署后在 Render Dashboard 中手动设置
-      # 不要在这里填写真实的 API Key（会被提交到 Git）
+      # 部署后请改为你的真实 API Key（在 Render Dashboard → Environment 中修改）
       - key: DEEPSEEK_API_KEY
-        sync: false
+        value: 待填写
